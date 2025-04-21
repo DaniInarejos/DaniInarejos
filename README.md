@@ -15,19 +15,19 @@
 💼 **12+ years** building backends that **scale, perform and last**.  
 🔁 Specialized in **Node.js**, **TypeScript** and **Google Cloud Platform (GCP)**.  
 🧠 Passionate about **code optimization**, clean architecture and distributed systems.  
-🤝 I've worked with high-performing teams in **startups, scale-ups and global corps**.  
-🛠️ Contributor to internal tooling, APIs and microservices across multiple companies.
+🤝 I've worked with high-performing teams in **startups, scale-ups and corps**.  
+🛠️ Collaborator on internal tools, APIs, technical decision-making, and microservices across several companies.
 
 ---
 
 ### 🛠️ Tech Stack
 
-- **Languages**: TypeScript · JavaScript · Python (light)
-- **Backend**: Node.js · Express · NestJS · Firebase · GraphQL
-- **Cloud & DevOps**: Google Cloud (Cloud Functions, Pub/Sub, Firestore, Cloud Run) · Docker · GitHub Actions
-- **Databases**: PostgreSQL · MongoDB · Redis · Firestore
-- **Testing**: Jest · Supertest · Postman · k6
-- **Tools & Methodologies**: Git · GitHub · GitFlow · Clean Architecture · SOLID · CI/CD
+- **Languages**: TypeScript · JavaScript · Go · Python · PHP
+- **Backend**: Node.js · Express/Fastify · RestFul · GraphQL · Web3 · Deno · Bun
+- **Cloud & DevOps**: Google Cloud (Cloud Functions, Pub/Sub, Cloud Run) · Docker · GitHub Actions · GitLab
+- **Databases**: SQL · MongoDB · Redis · Datastore · ElasticSearch
+- **Testing**: Jest · Mocha/chai · Supertest · Artillery · Clinic.js 
+- **Methodologies**: Functional programming · Object-Oriented Programming · GitFlow · Clean Architecture · Clean Code · SOLID · CI/CD · TDD
 
 ---
 
@@ -35,30 +35,68 @@
 
 | Project | Description | Stack |
 |--------|-------------|-------|
-| `plataforma-logistica` | Sistema de logística en tiempo real con microservicios escalables. | Node.js · GCP · Firestore · Pub/Sub |
-| `api-auth-micro` | Servicio de autenticación con JWT y control de acceso RBAC. | TypeScript · Redis · NestJS |
-| `cloud-utils-gcp` | Librería interna de herramientas para manejo eficiente de servicios en GCP. | Node.js · GCP SDK |
+| `Space` | Cloud-based system on GCP that dynamically launches virtual machines to serve real-time 3D apartment tours (rendered in Unreal Engine) directly in the browser. Automates the deployment of TURN servers and Unreal environments on demand, optimizing cost and ensuring high availability. | Node.js · GCP · Compute Engine · Cloud Functions · Unreal Engine ... |
+| `Swish` | Mobile app for advanced basketball statistics, designed for international amateur leagues. The backend is built with a GraphQL Federation architecture and a fully scalable microservices environment deployed on Google Cloud Platform. | Node.js · GCP · GraphQL Federation · Cloud Run · Pub/Sub · MongoDB · Datastore, ... |
+| `Back-office Fourvenues` | Event management platform for nightlife venues, designed to simplify business operations with powerful client analytics and financial tracking. Built with Node.js and TypeScript on Google Cloud, with a strong focus on performance optimization, scalability, and advanced search capabilities using ElasticSearch. | Node.js · TypeScript · GCP · ElasticSearch · Cloud Run · MongoDB |
+| `Point Of Sale` | API for TPV (point-of-sale) devices, designed to manage and log all payment information for venue owners. Integrated with Adyen's payment system using its APIs and webhooks for real-time transaction tracking and reconciliation. | Node.js · TypeScript · GCP · Adyen API · Webhooks |
+| `Studio` | Platform that connects property owners looking to renovate their homes with in-house architects from Clikalia’s studio. Focused on streamlining renovation requests and project coordination. | Node.js · TypeScript · GCP · REST API |
+| `Rentals` | Rental platform for Clikalia properties, including a private client area where users can manage their personal information and all data related to their rental agreements. | Node.js · TypeScript · GCP · Firebase Auth · Firestore |
+| `Back-office Clikalia` | Internal tool for managing the status and lifecycle of real estate properties. Focused on code optimization, project stabilization, and integration with SharePoint for storing files related to properties and clients. | Node.js · TypeScript · GCP · SharePoint |
 
-> Nota: algunos repos están privados por NDA, pero puedes ver resúmenes técnicos [aquí](#📘-project-summaries)
+
+> Note: These repositories are private due to NDA restrictions, but you can view technical summaries [here](#📘-project-summaries)
 
 ---
 
 ### 📘 Project Summaries
 
-🔐 **Empresa X – Plataforma logística**  
-> Backend en GCP con Cloud Functions y Pub/Sub. Refactor de servicios para reducir latencia. +85 PRs creados, 40 revisados. CI/CD con Cloud Build.
+🔐 Company Clikalia – Space
 
-🔐 **Empresa Y – Core Auth API**  
-> Sistema de autenticación para múltiples microservicios. Rol clave en diseño e implementación. Aumentó la eficiencia del sistema en un 35%.
+I designed and developed the backend architecture for Space, a solution that enables real-time virtual tours of properties rendered in Unreal Engine, accessible directly from the browser in first-person mode, with full movement and interaction.
+The system consists of an API that manages the upload of virtual tour assets to a Google Cloud bucket. This event triggers a function captured by a service responsible for automatically creating and preparing a persistent disk on Google Compute Engine. The disk includes everything needed to launch the tour in various regions, optimizing availability and latency.
+When a user requests a virtual guided tour, the system selects the appropriate disk, configures and launches a virtual machine on demand, which runs a TURN server and the Unreal Engine project, handling reverse proxy routing to securely deliver the experience to the client.
+Once the tour ends, the virtual machines are automatically shut down and deprovisioned to minimize operational costs.
+The entire flow is fully orchestrated using Google Cloud tools such as Compute Engine, Cloud Storage, Cloud Logger, Cloud Monitoring, and Pub/Sub, with a strong focus on automation, efficiency, and cost control.
 
-🔐 **Empresa Z – Dev Tools & DX**  
-> Herramientas internas para mejorar la DX de desarrolladores. Automatización, linters y tests integrados.
+
+🔐 **Company NBN23 – Swish · InGame App**  
+> I developed the backend architecture for two mobile applications focused on advanced basketball statistics and real-time game tracking for amateur leagues.
+I implemented a microservices-based infrastructure deployed entirely on Google Cloud, using Node.js, TypeScript, Cloud Functions, Pub/Sub, Compute Engine, Cloud Run, Datastore, Logger, Monitoring and MongoDB.
+The system was designed with an event-driven architecture, allowing for high scalability and effective decoupling between services.
+I designed and built a real-time advanced statistics engine powered by MongoDB triggers, webhooks, and asynchronous event processing.
+GraphQL Federation was used to provide a modular, efficient, and maintainable API layer.
+The ecosystem included over 50 distributed microservices across Swish and InGame, all maintained with test coverage above 70%, ensuring code quality and system stability.
+The entire platform was optimized to handle high-traffic scenarios, such as multiple games running simultaneously, ensuring performance, consistency, and reliability.
+
+
+🔐 **Company Fourvenues  – Back-office · Point Of Sale **  
+> I designed and developed an API for point-of-sale (POS) terminals, responsible for registering and validating ticket payments made by end users.
+This information is later consumed and managed by the Back-office system, where I worked on breaking down the monolith into independent business verticals, making the platform more scalable and resilient under high load conditions.
+
+I focused on optimizing the slowest and most frequently used endpoints, resulting in significant improvements in overall performance and user experience.
+I also implemented integrated messaging systems via SMS and WhatsApp, improved internal searches using ElasticSearch, and developed the integration with Adyen, enabling detailed financial control over transactions processed through the POS system.
+
+
+🔐 **Company Clikalia – Studio · Rentals · Back-office**  
+ **Studio**
+> I designed and built from scratch the backend architecture of Studio, a platform that connects property owners looking to renovate their homes with Clikalia’s in-house architects.
+The system was focused on streamlining renovation requests and coordinating project workflows, ensuring smooth communication between all involved parties.
+A key technical challenge was the dynamic generation of PDF documents using Puppeteer, followed by automated email delivery through the transactional email platform Brevo (formerly Sendinblue).
+
+ **Rentals · Back-office**
+> I developed key features for Clikalia's internal property management system, where the Backoffice handles the status of each property (e.g., published, available for rent).
+When a property is ready, it is automatically published for clients to request a reservation or a visit.
+
+Once a client passes the validation process and is approved, they can finalize the rental through their private dashboard, where they manage reservations and rental documentation.
+The rental contract is generated from the Backoffice and sent to the client, who can digitally sign it via Signaturit within their private area.
+This dashboard also allows users to upload documentation and manage any needs related to their rental.
+
 
 ---
 
 ### 📫 Contact
 
-- 📧 **Email:** inarejos.daniel@gmail.com  
+- 📧 **Email:** danielinarejosaroca@gmail.com  
 - 🌐 **LinkedIn:** [linkedin.com/in/daniel-inarejos](https://www.linkedin.com/in/daniel-inarejos)
 - 🛠️ **GitHub Projects:** Revisa los pinned repos para ver mis contribuciones
 
@@ -66,12 +104,9 @@
 
 ### ☕ Fun Facts
 
-- Me encanta desarmar código legacy y dejarlo 10x más limpio ⚔️
-- Siempre tengo una terminal abierta, incluso cuando cocino 🍳
-- El café no es un vicio... es una dependencia 💉☕
+- I love tearing down legacy code and making it 10x cleaner and faster ⚔️
+- I always have a terminal open, even when I’m cooking 🍳 (Yes, I love it both)
+- Green tea is a must-have 🍵
 
 ---
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=daniel-inarejos&show_icons=true&theme=tokyonight&count_private=true" />
-</p>
