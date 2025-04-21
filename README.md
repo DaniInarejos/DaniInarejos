@@ -50,9 +50,8 @@
 
 ### 📘 Project Summaries
 
-🔐 Company Clikalia – Space
-
-I designed and developed the backend architecture for Space, a solution that enables real-time virtual tours of properties rendered in Unreal Engine, accessible directly from the browser in first-person mode, with full movement and interaction.
+🔐 **Company Clikalia – Space**
+> I designed and developed the backend architecture for Space, a solution that enables real-time virtual tours of properties rendered in Unreal Engine, accessible directly from the browser in first-person mode, with full movement and interaction.
 The system consists of an API that manages the upload of virtual tour assets to a Google Cloud bucket. This event triggers a function captured by a service responsible for automatically creating and preparing a persistent disk on Google Compute Engine. The disk includes everything needed to launch the tour in various regions, optimizing availability and latency.
 When a user requests a virtual guided tour, the system selects the appropriate disk, configures and launches a virtual machine on demand, which runs a TURN server and the Unreal Engine project, handling reverse proxy routing to securely deliver the experience to the client.
 Once the tour ends, the virtual machines are automatically shut down and deprovisioned to minimize operational costs.
@@ -72,7 +71,6 @@ The entire platform was optimized to handle high-traffic scenarios, such as mult
 🔐 **Company Fourvenues  – Back-office · Point Of Sale **  
 > I designed and developed an API for point-of-sale (POS) terminals, responsible for registering and validating ticket payments made by end users.
 This information is later consumed and managed by the Back-office system, where I worked on breaking down the monolith into independent business verticals, making the platform more scalable and resilient under high load conditions.
-
 I focused on optimizing the slowest and most frequently used endpoints, resulting in significant improvements in overall performance and user experience.
 I also implemented integrated messaging systems via SMS and WhatsApp, improved internal searches using ElasticSearch, and developed the integration with Adyen, enabling detailed financial control over transactions processed through the POS system.
 
@@ -86,7 +84,6 @@ A key technical challenge was the dynamic generation of PDF documents using Pupp
  **Rentals · Back-office**
 > I developed key features for Clikalia's internal property management system, where the Backoffice handles the status of each property (e.g., published, available for rent).
 When a property is ready, it is automatically published for clients to request a reservation or a visit.
-
 Once a client passes the validation process and is approved, they can finalize the rental through their private dashboard, where they manage reservations and rental documentation.
 The rental contract is generated from the Backoffice and sent to the client, who can digitally sign it via Signaturit within their private area.
 This dashboard also allows users to upload documentation and manage any needs related to their rental.
