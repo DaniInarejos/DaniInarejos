@@ -90,8 +90,8 @@ The rental contract is generated from the Backoffice and sent to the client, who
 This dashboard also allows users to upload documentation and manage any needs related to their rental.
 
 
- **SkySphere**
-> SkySphere is a **personal project** that I designed, developed, and deployed entirely on my own. It's a comprehensive social platform specifically built for FPV (First Person View) drone pilots to connect, share experiences, and grow the community.
+ **[SkySphere](https://skysphere.app)**
+> [SkySphere](https://skysphere.app) is a **personal project** that I designed, developed, and deployed entirely on my own. It's a comprehensive social platform specifically built for FPV (First Person View) drone pilots to connect, share experiences, and grow the community.
 The platform allows pilots to log and share their flights with detailed telemetry data, manage their drone equipment inventory, discover and rate flying spots worldwide, create and join groups based on interests or locations, and engage through posts, comments, and social interactions.
 **Backend Architecture:** Built with Bun.js and TypeScript with a Hono server, implementing clean architecture with proper separation of concerns. The API features JWT authentication, role-based authorization, comprehensive input validation with Zod, structured logging, and optimized database queries with aggregation pipelines.
 **Frontend Development:** Developed as a Single Page Application (SPA) using Vue.js 3 with Composition API, TypeScript, and Tailwind CSS. Features responsive design, real-time updates, interactive maps for spot discovery, rich text editing, image upload with optimization, and comprehensive state management.
@@ -105,7 +105,6 @@ The entire project showcases full-stack development capabilities, from database 
 
 - 📧 **Email:** danielinarejosaroca@gmail.com  
 - 🌐 **LinkedIn:** [linkedin.com/in/daniel-inarejos](https://www.linkedin.com/in/daniel-inarejos)
-- 🛠️ **GitHub Projects:** Revisa los pinned repos para ver mis contribuciones
 
 ---
 
