@@ -42,9 +42,10 @@
 | `Studio` | Platform that connects property owners looking to renovate their homes with in-house architects from Clikalia’s studio. Focused on streamlining renovation requests and project coordination. | Node.js · TypeScript · GCP · REST API |
 | `Rentals` | Rental platform for Clikalia properties, including a private client area where users can manage their personal information and all data related to their rental agreements. | Node.js · TypeScript · GCP · Firebase Auth · Firestore |
 | `Back-office Clikalia` | Internal tool for managing the status and lifecycle of real estate properties. Focused on code optimization, project stabilization, and integration with SharePoint for storing files related to properties and clients. | Node.js · TypeScript · GCP · SharePoint |
+| `SkySphere` | Full-stack social platform for FPV drone pilots to share flights, manage equipment, discover spots, and connect with the community. Complete end-to-end development including backend API, frontend SPA, and cloud infrastructure deployment. | Vue.js · Node.js · TypeScript · MongoDB Atlas · Render · Cloudflare · Firebase · Redis · Upstash · Namecheap · MailSender |
 
 
-> Note: These repositories are private due to NDA restrictions, but you can view technical summaries [here](#📘-project-summaries)
+> Note: Company repositories are private due to NDA restrictions, but you can view technical summaries [here](#📘-project-summaries)
 
 ---
 
@@ -87,6 +88,15 @@ When a property is ready, it is automatically published for clients to request a
 Once a client passes the validation process and is approved, they can finalize the rental through their private dashboard, where they manage reservations and rental documentation.
 The rental contract is generated from the Backoffice and sent to the client, who can digitally sign it via Signaturit within their private area.
 This dashboard also allows users to upload documentation and manage any needs related to their rental.
+
+
+ **SkySphere**
+> SkySphere is a **personal project** that I designed, developed, and deployed entirely on my own. It's a comprehensive social platform specifically built for FPV (First Person View) drone pilots to connect, share experiences, and grow the community.
+The platform allows pilots to log and share their flights with detailed telemetry data, manage their drone equipment inventory, discover and rate flying spots worldwide, create and join groups based on interests or locations, and engage through posts, comments, and social interactions.
+**Backend Architecture:** Built with Bun.js and TypeScript with a Hono server, implementing clean architecture with proper separation of concerns. The API features JWT authentication, role-based authorization, comprehensive input validation with Zod, structured logging, and optimized database queries with aggregation pipelines.
+**Frontend Development:** Developed as a Single Page Application (SPA) using Vue.js 3 with Composition API, TypeScript, and Tailwind CSS. Features responsive design, real-time updates, interactive maps for spot discovery, rich text editing, image upload with optimization, and comprehensive state management.
+**Infrastructure & DevOps:** Deployed on a robust cloud infrastructure using MongoDB Atlas for primary database, Render for backend hosting with auto-scaling, Cloudflare for CDN and security, Firebase for file storage and real-time features, Redis (Upstash) for caching and session management, Namecheap for domain management, and MailSender for transactional emails.
+The entire project showcases full-stack development capabilities, from database design and API architecture to modern frontend development and cloud infrastructure management.
 
 
 ---
